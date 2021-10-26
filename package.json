@@ -1,11 +1,16 @@
 {
-  "name": "nombre",
+  "name": "create_discord_bot_v13",
   "version": "1.0.0",
-  "description": "",
+  "description": "A template of a discord bot on discord v13.",
+  "bin": "./bin/cli.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dev-Markox36/create_discord_bot_v13.git"
   },
   "keywords": [],
   "author": "",
