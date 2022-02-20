@@ -1,5 +1,3 @@
-const streamRequest = require("../utils/streams.js")
-
 module.exports = {  
     name: 'ready',
     run: async (client) => {
@@ -9,6 +7,5 @@ module.exports = {
         client.user.setActivity(`!help | ${client.user.username}`, {
             type: 'WATCHING'
         });
-        streamRequest(client);
     }
 }

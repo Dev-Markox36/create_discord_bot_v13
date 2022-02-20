@@ -1,8 +1,7 @@
 {
   "name": "create_discord_bot_v13",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A template of a discord bot on discord v13.",
-  "bin": "./bin/cli.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,7 +16,6 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/rest": "0.1.0-canary.0",
-    "@extreme_hero/deeptype": "^1.0.1",
     "axios": "^0.23.0",
     "discord-api-types": "^0.24.0",
     "discord.js": "^13.1.0",

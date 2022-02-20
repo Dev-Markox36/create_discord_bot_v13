@@ -1,7 +1,6 @@
 module.exports = {
     name: 'interactionCreate',
     run: async (client, interaction) => {
-		const { COLORS, EMOTES } = client.config.BOT;
 		if (interaction.isCommand()) {
 		const command = client.slashCommands.get(interaction.commandName);
 		const args = [];

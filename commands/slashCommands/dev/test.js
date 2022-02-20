@@ -25,23 +25,24 @@ module.exports = {
             ]
         },
     ],
-    run: async (client, int, args, serverModel) => {
+    run: async (client, int, args) => {
 
-        const { COLORS, EMOTES } = client.config.BOT;
+        const { emotes, colors } = client.config;
 
         if (args[0] === "join") {
             client.emit("guildMemberAdd", int.member)
             const embed = new MessageEmbed()
-            .setDescription(EMOTES.success+'Evento guildMemberAdd emitido.')
-            .setColor(COLORS.main);
+            .setDescription(emotes.success+'Evento guildMemberAdd emitido.')
+            .setColor(colors.main);
             int.reply({ embeds: [embed] });
         }
         
         if (args[0] === "emotes") {
-            const embed = new MessageEmbed()
-            .setTitle('Lista de Emotes')
-            .setDescription("success: "+EMOTES.success+"\n"+"error: "+EMOTES.error)
-            .setColor(COLORS.main);
+            const embed = {
+                title: 'Lista de Emotes',
+                description: "success: "+emotes.success+"\n"+"error: "+emotes.error,
+                color: "colors.main"
+            }
             int.reply({ embeds: [embed]})
         }
     }
