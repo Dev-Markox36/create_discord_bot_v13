@@ -29,8 +29,7 @@ class ExtendedClient extends Client {
     });
   } 
   async run() {
-    if (!process.env.BOT_TOKEN) return console.log('❌ Token no configurado');
-    await this.login(process.env.BOT_TOKEN);
+    process.env.BOT_TOKEN ? await this.login(process.env.BOT_TOKEN) : return console.log('❌ Token no configurado');
     await registerEvents(this);
     await registerCommands(this);
     await registerSlashCommands(this);
